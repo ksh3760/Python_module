@@ -16,11 +16,8 @@ print(type(res))
 # 데이터 분석하기 -------------------------------------
 soup = BeautifulSoup(res, "html.parser")
 
-
 # 원하는 데이터 추출 ---------------------------------
 # copy selector해서 바로 원하는 데이터 가져오기
-#usddata = soup.select_one("#exchangeList > li:nth-child(1) > a.head.usd > div > span.value")
-
 
 기업명 = soup.select_one("section.sp_company.sc_new._au_company_search._au_company_answer > div > div.company_area > div:nth-child(2) > ul > li:nth-child(1) > span.txt > span")
 기업구분 = soup.select_one("section.sp_company.sc_new._au_company_search._au_company_answer > div > div.company_area > div:nth-child(2) > ul > li:nth-child(2) > span.txt > span > a")
